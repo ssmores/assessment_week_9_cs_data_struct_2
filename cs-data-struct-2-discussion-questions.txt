@@ -1,0 +1,66 @@
+Part 1: Discussion questions
+
+Recursion
+    1. In your own words, what is Recursion?
+    A:  Recursion is when a function calls itself (so, within the function defintion, the function names/references itself). 
+
+    2. Why is it necessary to have a Base Case?
+    A: It's necessary to have a Base Case in a recursive function so that the function will "stop" or end, or reach a place where it doesn't keep on calling itself. It could keep on calling itself (if you don't write a base case or if you write the base case incorrect), but you will run out of memory (in the exact same way one could write an infinite loop, only with more memory being chewed up). 
+
+
+Graphs
+
+    1. What is a Graph?
+    A: Graphs are like trees, but they contain loops (where two parent nodes point to one child node). 
+
+    2. How is a Graph different from a Tree?
+    A: Trees can have many children (as can graphs), but nodes can only have one parent in a tree, whereas nodes can have more than one parent in a graph. 
+
+    3. Give an example of somthing that would be good to model with a Graph.
+    A:  A circuit design could be something you would model with a Graph. A feedback loop would be good to model with a graph also. 
+
+
+Performance of Different Data Structures
+
+Data Structure                  Index   Search  Add-R   Add-L   Pop-L   Pop-R
+Python List (Array)             O(1)    O(n)    O(1)    O(n)    O(n)    O(1)    
+Linked List                     O(n)    O(n)    O(1)*   O(1)    O(1)    O(n)
+*The asterics for the Add-R for the linked list assumes that the tail is being tracked.  If the tail isn't being tracked, then the runtime for adding to the right of a linked list would be O(n).                         
+Doubly-Linked List              O(n)    O(n)    O(1)    O(1)    O(1)    O(1)  
+Queue (as Array)                X       X       O(1)    X       O(n)    X       
+Queue (as LL or DLL)            X       X       O(1)    X       O(1)    X
+Stack (as Array, LL, or DLL)    X       X       O(1)    X       X       O(1)
+Deque (as DLL)                  X       X       O(1)    O(1)    O(1)    O(1)             
+
+Fill in Runtime and Memory:
+
+    The answers for Dictionary have been provided; you should fill in the rest:
+    Data Structure          Get     Add     Delete  Iterate Memory
+    Dictionary (Hash Map)   O(1)    O(1)    O(1)    O(n)    medium
+    Set (Hash Map)          O(1)    O(1)    O(1)    O(n)    medium   
+    Binary Search Tree      O(log n) O(n)    O(n)    O(1)    small              
+    Tree                    O(n)    O(1)    O(1)    O(1)    small 
+
+
+Sorting
+
+    1. Describe in words how the Bubble Sort algorithm works.
+    A:  The bubble Sort algorithm works by first looking at the first two numbers in the list and doing a comparison to determine which number is higher. If the higher number comes first in the pair, it is moved to the right, and then you compare the seond number in the pair, and the number its right, and repeat the comparison process.  Do this until all pairs have been checked and adjusted accordingly. 
+
+    2. Describe in words how the Merge Sort algorithm works.
+    A:  A new list is initialized for this sort. The merge sort is when you take two sorted lists, you compare the values at index 0 in both lists, and whichever one is smaller is popped off its respective list, and appended to the list initialized at the beginning of this process. This continues until both lists are empty.    
+
+    3. Describe in words how the Quick Sort algorithm works.
+    A:  The quick sort is when a random pivot (place/number) is chosen in the list, and numbers are randomly placed on the left hand side that are lower than the pivot.  Numbers greater than the pivot are randomly placed on the right hand side of that pivot/number. This keeps on repeatin on its respective side, with the remaining numbers being its own little smaller list. 
+
+
+
+Git Branching
+
+    1. Give an instance when you would use git branching.
+    A:  You may use git branching when you are creating and testing a new feature, and you don't want to push it to the master yet.  You definitely want to create and then test it on a branch, and then release it to your production environment. 
+
+    2. What is a pull request?
+    A:  A pull request is a GitHub specific feature, where you can pull down the master code, work on it (to add some feature, or to refactor it, etc.), and then push it up to the code owner.  They can decide if they would like to merge your code into the master branch or not. This is how you can contribute to other people's code. 
+
+
